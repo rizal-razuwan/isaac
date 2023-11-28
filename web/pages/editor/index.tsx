@@ -39,6 +39,7 @@ const EditorPage = () => {
 	const { data: projects, isLoading: isGetProjectsLoading } =
 		useGetProjects(user);
 	const editorWidth = useUIStore(s => s.editorWidth);
+
 	useHandleToastQuery();
 
 	const projectGridClasses = useMemo(

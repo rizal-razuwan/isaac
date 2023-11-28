@@ -25,7 +25,9 @@ const useHandleToastQuery = () => {
 	useEffect(() => {
 		const toastData = toastQueryData[toastQuery];
 		if (toastData) {
-			toast[toastData.status](toastData.message);
+			setTimeout(() => {
+				toast[toastData.status](toastData.message);
+			}, 500);
 		}
 	}, [toastQuery]);
 };
